@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>ThreeJS Display</title>
+		<style>
+			body { margin: 0; 
+				background-color: #aed2ff; /* 淡藍色背景顏色 */
+			  	margin: 0; /* 清除預設的頁面邊距 */
+			  	padding: 0; /* 清除預設的頁面內邊距 */
+			}
+		</style>
+		<script type="module" src="../main.js"></script>
+	</head>
+	<body>
+		
+		<script>
+			// 在第二个 HTML 文件中检索 SVG 数据
+			const svgData = localStorage.getItem('sharedSVG');
+			
+			// 在此可以使用 SVG 数据，例如将其插入到页面中
+			const svgContainer = document.createElement('div');
+			svgContainer.innerHTML = svgData;
+			document.body.appendChild(svgContainer);
+	
+			// 在这里你可以使用 svgData 进行操作，例如修改 SVG 元素的属性或进行其他操作
+		</script>
+	</body>
+</html>
