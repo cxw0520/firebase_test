@@ -10,7 +10,15 @@
 			  	padding: 0; /* 清除預設的頁面內邊距 */
 			}
 		</style>
-		<script type="module" src="../main.js"></script>
+		<script type="importmap">
+			{
+			  "imports": {
+				"three": "https://unpkg.com/three@v0.157.0/build/three.module.js",
+				"three/addons/": "https://unpkg.com/three@v0.157.0/examples/jsm/"
+			  }
+			}
+		  </script>
+		<script type="module" src="./main.js"></script>
 	</head>
 	<body>
 		

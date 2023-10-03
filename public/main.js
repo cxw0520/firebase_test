@@ -1,8 +1,8 @@
-import * as THREE from '/three';
+import * as THREE from 'three';
 //import { Texture } from '/three';
-import { SVGLoader } from '/three/addons/loaders/SVGLoader.js';
-import { TextGeometry } from '/three/addons/geometries/TextGeometry.js';
-import { FontLoader } from '/three/addons/loaders/FontLoader.js';
+import { SVGLoader } from 'three/addons/loaders/SVGLoader.js';
+import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
+import { FontLoader } from 'three/addons/loaders/FontLoader.js';
 
 
 const scene = new THREE.Scene();
@@ -25,7 +25,7 @@ const svgloader = new SVGLoader();
 // load a SVG resource
 svgloader.load(
 	// resource URL
-	'/drawing.svg',
+	'./drawing.svg',
 	// 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgData),
 	// called when the resource is loaded
 	function ( data ) {
@@ -97,7 +97,7 @@ var line = new THREE.Line( geometry, material );
 scene.add( line );
 
 const textloader = new FontLoader();
-textloader.load('three_js/examples/fonts/helvetiker_regular.typeface.json', function (font) {
+textloader.load('../node_modules/three/examples/fonts/helvetiker_regular.typeface.json', function (font) {
 	// 創建文字的幾何形狀
 	const texts = ['A', 'B', 'C', 'D'];
 	const i=0;
